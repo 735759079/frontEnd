@@ -1,4 +1,4 @@
-1、jsx本质
+> 1、jsx本质
   react.createElement('element','attribute','content)方法
 
 2、import PropTypes from 'prop-types'进行类型检测
@@ -32,21 +32,21 @@
 10、Protals传送门
 
 11、react API
-  React.Component
-  React.PureComponent
-  React.memo???
-  React.createElement，等同于jsx
-  React.cloneElement，克隆并返回一个新的react元素
-  React.isValidElement，验证对象是否是一个react对象
-  React.Clidren，提供了处理this.props.children数据结构的工具
+  > React.Component
+  > React.PureComponent
+  > React.memo???
+  > React.createElement，等同于jsx
+  > React.cloneElement，克隆并返回一个新的react元素
+  > React.isValidElement，验证对象是否是一个react对象
+  > React.Clidren，提供了处理this.props.children数据结构的工具
     map，遍历并返回
     forEach，类似map，但是不返回数组
     count，组件总数，等于map或者forEach遍历次数
     only，验证只有唯一一个孩子，并返回它
     toAarray，返回一个排序的数组
-  React.Fragment，render方法返回对个元素，不需用创造一个额外的dom元素
-  React.createRef
-  React.forwardRef，创造一个react组件，可以接收ref属性
+  > React.Fragment，render方法返回对个元素，不需用创造一个额外的dom元素
+  > React.createRef
+  > React.forwardRef，创造一个react组件，可以接收ref属性
 
 12、生命周期
   装载时：
