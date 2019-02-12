@@ -1,5 +1,5 @@
 > 1、jsx本质
-  react.createElement('element','attribute','content)方法
+  [react.createElement('element','attribute','content)方法]
 
 2、import PropTypes from 'prop-types'进行类型检测
 
