@@ -50,18 +50,30 @@
 
 ### 12、生命周期
   * 装载时：
-    constructor()
-    static getDerivedStateFromProps()
-    render()
-    componentDidMount()
+    * constructor()
+    * static getDerivedStateFromProps()，组件实例化后和接收新属性时调用，返回一个对象来更新状态，或者返回null表明不需要更新任何状态。
+      * 父组件导致组件重新渲染，即使属性没更新，也会被调用
+      * 调用this.setState()，通常不会触发改方法。
+    * render()
+    * componentDidMount()，组件装载后调用，网络请求最好放这里
   * 更新后：
-    static getDerivedStateFromProps()
-    shouldComponentUpdate()
-    render()
-    getSnapshotBeforeUpdate()
-    componentUpdate()
+    * static getDerivedStateFromProps()
+    * shouldComponentUpdate()，接收到新属性或状态，在渲染前被调用，性能优化的一种手段
+    * render()
+    * getSnapshotBeforeUpdate()，在最新渲染输出提交给DOM前调用
+      * 这个生命周期返回的任何值都会作为参数传递给componentDidUpdate()
+    * componentDidUpdate()，初次渲染不会被调用，更新发生后调用
   * 卸载：
-    componentWillUnmount()
-  * 错误处理：
-    static getDerivedStateFromError()
-    componentDidCatch
+    * componentWillUnmount()，组件被卸载和销毁之前调用，清理在componentDidMount中创建的订阅
+  * 错误处理：，显示一个回退UI，防止组件树崩溃
+    * static getDerivedStateFromError()，后代组件抛出错误之后
+      * 参数接收被抛出的错误，并返回一个值更新状态
+    * componentDidCatch，后代组件抛出错误之后
+
+### this.setState方法
+  * 异步的
+  * 第一个参数是一个updater函数，(state,props)=> stateChange
+  * 第二个参数一个回调函数
+
+### react的类属性
+  * defaultProps 设置组件的默认属性
