@@ -20,7 +20,6 @@
   * 动画
 * 用纯CSS创建一个三角形的原理是什么？
 首先，需要把元素的宽度、高度设为0。然后设置边框样式。
-
 width: 0;
 height: 0;
 border-top: 40px solid transparent;
