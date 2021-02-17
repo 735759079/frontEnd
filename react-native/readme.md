@@ -1,3 +1,4 @@
+```
 1、h5页面和rn的交互，通过postmessage
 function awaitPostMessage() {
         var isReactNativePostMessageReady = false;
@@ -27,3 +28,13 @@ function awaitPostMessage() {
     awaitPostMessage();
     window.postMessage('index1111');
     window.postMessage('index2222');
+```
+
+## 和原生交互
+
+-   RCTDeviceEventEmitter
+-   CallBack
+-   Promise
+
+-   DeviceEventEmitter
+-   NativeModules
